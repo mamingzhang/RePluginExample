@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FileOutputStream outputStream = null;
         try {
             inputStream = getAssets().open(demo1ApkPath);
-            outputStream = openFileOutput(demo1PluginPath, Context.MODE_PRIVATE);
+            outputStream = openFileOutput("plugin1.apk", Context.MODE_PRIVATE);
             int count = 0;
             byte[] buffer = new byte[1024];
             while ((count = inputStream.read(buffer)) != -1) {
