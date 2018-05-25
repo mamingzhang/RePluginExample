@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "horsege.com.host"
+        applicationId "com.horsege.host"
         minSdkVersion 22
         targetSdkVersion 27
         versionCode 1
@@ -22,6 +22,12 @@ android {
     }
 }
 
+apply plugin: 'replugin-host-gradle'
+
+repluginHostConfig {
+    useAppCompat = true
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
@@ -30,4 +36,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.qihoo360.replugin:replugin-host-lib:2.2.4'
 }
