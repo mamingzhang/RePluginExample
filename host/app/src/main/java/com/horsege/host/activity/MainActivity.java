@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if (pluginInfo != null) {
-            RePlugin.startActivity(this, RePlugin.createIntent(pluginInfo.getName(), "com.horsege.plugin1.activity.MainActitity"));
+            RePlugin.startActivity(this, RePlugin.createIntent(pluginInfo.getName(), "com.horsege.plugin1.activity.MainActivity"));
         }
     }
 }
