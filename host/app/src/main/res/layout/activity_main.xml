@@ -11,6 +11,12 @@
         android:id="@+id/externalPluginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="启动外置插件" />
+        android:text="启动外置插件Plugin1" />
+
+    <Button
+        android:id="@+id/internalPluginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动内置插件Plugin2" />
 
 </LinearLayout>

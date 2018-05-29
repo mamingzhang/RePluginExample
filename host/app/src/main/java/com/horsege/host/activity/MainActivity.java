@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.externalPluginBtn).setOnClickListener(this);
+        findViewById(R.id.internalPluginBtn).setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.externalPluginBtn: {
                 installExternalPlugin();
+                break;
+            }
+            case R.id.internalPluginBtn: {
+                RePlugin.startActivity(this, RePlugin.createIntent("com.horsege.plugin2", "com.horsege.plugin2.activity.MainActivity"));
                 break;
             }
         }
